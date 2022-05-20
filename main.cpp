@@ -15,7 +15,7 @@ int main() {
     filesystem::path cwd = input_path;
     int file_count;
     vector files = files2dVector(cwd, file_count);
-    MyLinkedList myMLList;
+    MultiLinkedList myMLList;
 
     for (int i = 0; i < file_count; i++)
     {
@@ -96,6 +96,5 @@ int main() {
                 cout << "Non-valid argument, run again!\n";
                 break;
         }
-
     }
 }

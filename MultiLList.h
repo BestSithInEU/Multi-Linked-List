@@ -13,7 +13,7 @@
 
 using namespace std;
 
-class MyLinkedList {
+class MultiLinkedList {
 public:
     struct ListNode {
         ListNode *next_name, *next_ext, *next_size;
@@ -27,11 +27,14 @@ public:
     ListNode *head_name, *head_ext, *head_size;
     int fileCount = 0;
 
-    MyLinkedList() {
+    MultiLinkedList() {
         head_name = head_ext = head_size = nullptr;
     }
-
-    ~MyLinkedList() {
+    /**
+     * @brief Destroy the My Linked List object WIP.
+     * 
+     */
+    ~MultiLinkedList() {
         ListNode *curr_name = head_name, *curr_ext = head_ext, *curr_size = head_size;
         ListNode *nextNodeName = nullptr, *nextNodeExt = nullptr, *nextNodeSize = nullptr;
 
@@ -52,7 +55,18 @@ public:
         }
     }
 
+    /**
+     * @brief Creates a node with the specified name extension and specified dimensions
+     * and adds it sequentially to the linked list. in order of name, extension and size 
+     * nodes; name pointers, extension pointers, and size pointers are sequentially
+     * linked among themselves. (Ordered with respect to ASCII Table.)
+     * *********************************************************************************
+     * @param name Value of the node's name in a string representation.
+     * @param ext Value of the node's extension in a string representation.
+     * @param size Value of the node's size in a string representation.
+     */
     void addNode(const string &name, const string &ext, const string &size) {
+        
         ListNode *node = new ListNode(name, ext, size);
 
         //////////////////////// NAME SIDE ////////////////////////
@@ -102,6 +116,10 @@ public:
         fileCount++;
     }
 
+    /**
+     * @brief Print all nodes infos like:
+     * string name ||| string ext ||| string size
+     */
     void printInfosName() const {
         for (ListNode *tmp = head_name; tmp != nullptr; tmp = tmp->next_name)
         {
@@ -111,7 +129,10 @@ public:
         cout << endl;
     }
 
-
+    /**
+     * @brief Print all nodes infos like:
+     * string ext ||| string name ||| string size
+     */
     void printInfosExt() const {
         for (ListNode *tmp = head_ext; tmp != nullptr; tmp = tmp->next_ext)
         {
@@ -121,6 +142,10 @@ public:
         cout << endl;
     }
 
+    /**
+     * @brief Print all nodes infos like:
+     * string size ||| string name ||| string ext
+     */
     void printInfosSize() const {
         for (ListNode *tmp = head_size; tmp != nullptr; tmp = tmp->next_size)
         {
@@ -130,6 +155,11 @@ public:
         cout << endl;
     }
 
+    /**
+     * @brief Searches all nodes with the given string name.
+     * 
+     * @param name string name of the file to search.
+     */
     void searchFileName(const string &name) {
         bool flag = false;
         for (ListNode *tmp = head_name; tmp != nullptr; tmp = tmp->next_name)
@@ -147,6 +177,11 @@ public:
             cout << "There is no file with that extension." << endl;
     }
 
+    /**
+     * @brief Searches all nodes with the given string extension.
+     * 
+     * @param ext string extension of the file to search.
+     */
     void searchFileExt(const string &ext) {
         bool flag = false;
         for (ListNode *tmp = head_ext; tmp != nullptr; tmp = tmp->next_ext)
@@ -164,6 +199,11 @@ public:
             cout << "There is no file with that extension." << endl;
     }
 
+    /**
+     * @brief Searches all nodes with the given string size.
+     * 
+     * @param size string size of the file to search.
+     */
     void searchFileSize(const string &size) {
         bool flag = false;
         for (ListNode *tmp = head_size; tmp != nullptr; tmp = tmp->next_size)
@@ -181,6 +221,11 @@ public:
             cout << "There is no file with that extension." << endl;
     }
 
+    /**
+     * @brief Searches all nodes with the given string name and deletes that node.
+     * 
+     * @param filename string name of the file.
+     */
     void deleteNode(const string &filename) {
         ListNode *temp_name = head_name, *temp_ext = head_ext, *temp_size = head_size;
         ListNode *prev_name = nullptr, *prev_ext = nullptr, *prev_size = nullptr;
@@ -209,6 +254,10 @@ public:
         }
     }
 
+    /**
+     * @brief Destroyes multi-linked list and sets the file count to zero.
+     * 
+     */
     void destroyList() {
         for (int i = 0; i < fileCount; i++) {
             ListNode *temp_name = head_name, *temp_ext = head_ext, *temp_size = head_size;
@@ -220,7 +269,6 @@ public:
         }
         fileCount = 0;
     }
-
 };
 
 #endif //UNTITLED1_MULTILLIST_H
