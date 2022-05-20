@@ -1,0 +1,3 @@
+C:/Users/batuh/Desktop/Project_Batuhan_Edguer/build/CMakeFiles/untitled1.dir
+C:/Users/batuh/Desktop/Project_Batuhan_Edguer/build/CMakeFiles/edit_cache.dir
+C:/Users/batuh/Desktop/Project_Batuhan_Edguer/build/CMakeFiles/rebuild_cache.dir

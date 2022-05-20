@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/batuh/Desktop/Project_Batuhan_Edguer/build",
+  "command": "C:\\MinGW64\\bin\\g++.exe   -g -std=gnu++20 -o CMakeFiles\\untitled1.dir\\main.cpp.obj -c C:\\Users\\batuh\\Desktop\\Project_Batuhan_Edguer\\main.cpp",
+  "file": "C:/Users/batuh/Desktop/Project_Batuhan_Edguer/main.cpp"
+},
+{
+  "directory": "C:/Users/batuh/Desktop/Project_Batuhan_Edguer/build",
+  "command": "C:\\MinGW64\\bin\\g++.exe   -g -std=gnu++20 -o CMakeFiles\\untitled1.dir\\MultiLList.cpp.obj -c C:\\Users\\batuh\\Desktop\\Project_Batuhan_Edguer\\MultiLList.cpp",
+  "file": "C:/Users/batuh/Desktop/Project_Batuhan_Edguer/MultiLList.cpp"
+}
+]
